@@ -21,3 +21,13 @@ Tue 12 Mar 2024 02:07:04 PM UTC:
  tests:  0|5
 total_score: 20/70
 37c4fcf
+Tue 12 Mar 2024 02:07:38 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:39:14: error: expected expression before ‘;’ token
+   39 |       inicio+;
+      |              ^
+Compilation failed
+a5cce50
