@@ -50,7 +50,7 @@ int *filterEvenNumbers(int arr[], int size, int *newSize) {
   int *resultado = (int*) malloc(size * sizeof(int));
   if(resultado == NULL) 
   {
-    *newsize = 0;
+    *newSize = 0;
     return NULL;
   }
   int contador = 0;
