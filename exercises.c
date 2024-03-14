@@ -20,7 +20,6 @@ int findMax(int arr[], int size) {
     }
   return maximo;
 }
-
 /*
 Ejercicio 2: Invertir un Arreglo
 Descripción: Escribe una función que tome un arreglo y su tamaño, y luego
@@ -47,7 +46,25 @@ Descripción: Escribe una función que tome un arreglo de enteros
 y su tamaño, y luego devuelva un nuevo arreglo que contenga solo
 los números pares del arreglo original.
 */
-int *filterEvenNumbers(int arr[], int size, int *newSize) { return NULL; }
+int *filterEvenNumbers(int arr[], int size, int *newSize) { 
+  int *resultado = (int*) malloc(size * sizeof(int));
+  if(resultado == NULL) 
+  {
+    *newsize = 0;
+    return NULL;
+  }
+  int contador = 0;
+  for(int i = 0 ; i < size ;i++)
+    {
+      if(arr[i] % 2 == 0)
+      {
+        resultado[contador] = arr[i];
+        contador++;
+      }
+    }
+  *newSize = contador;
+  return resultado; 
+}
 
 /*
 Ejercicio 4: Fusión de dos Arreglos Ordenados
