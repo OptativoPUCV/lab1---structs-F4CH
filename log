@@ -66,3 +66,15 @@ Thu 14 Mar 2024 07:26:20 PM UTC:
  tests:  0|4
 total_score: 30/70
 6980221
+Thu 14 Mar 2024 07:41:09 PM UTC: 
+ exercises.c | 26 +++++++++++++++++++++++++-
+ 1 file changed, 25 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:81:10: error: ‘arr’ undeclared (first use in this function); did you mean ‘arr2’?
+   81 |       if(arr[i] < arr2[j])
+      |          ^~~
+      |          arr2
+exercises.c:81:10: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+46899b8
