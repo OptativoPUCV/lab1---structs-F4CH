@@ -225,3 +225,34 @@ exercises.c:160:20: error: invalid type argument of ‘->’ (have ‘Autor’)
       |                    ^~
 Compilation failed
 1f3c1d1
+Fri 15 Mar 2024 09:35:09 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘inicializarLibro’:
+exercises.c:153:22: error: invalid initializer
+  153 |   Libro temp_libro = (Libro*) malloc(sizeof(Libro));
+      |                      ^
+exercises.c:154:17: error: invalid operands to binary == (have ‘Libro’ and ‘void *’)
+  154 |   if(temp_libro == NULL) exit(EXIT_FAILURE);
+      |                 ^~
+exercises.c:155:13: error: invalid type argument of ‘->’ (have ‘Libro’)
+  155 |   temp_libro->autor = (Autor *) malloc(sizeof(Autor));
+      |             ^~
+exercises.c:156:16: error: invalid type argument of ‘->’ (have ‘Libro’)
+  156 |   if(temp_libro->autor == NULL) exit(EXIT_FAILURE);
+      |                ^~
+exercises.c:157:20: error: invalid type argument of ‘->’ (have ‘Libro’)
+  157 |   strcpy(temp_libro->titulo, titulo);
+      |                    ^~
+exercises.c:158:13: error: invalid type argument of ‘->’ (have ‘Libro’)
+  158 |   temp_libro->anioPublicacion = anioPublicacion;
+      |             ^~
+exercises.c:159:20: error: invalid type argument of ‘->’ (have ‘Libro’)
+  159 |   strcpy(temp_libro->autor->nombre, nombreAutor);
+      |                    ^~
+exercises.c:160:13: error: invalid type argument of ‘->’ (have ‘Libro’)
+  160 |   temp_libro->autor->anioNacimiento = anioNacimiento;
+      |             ^~
+Compilation failed
+22684d3
