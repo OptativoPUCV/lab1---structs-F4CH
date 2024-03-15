@@ -176,3 +176,31 @@ Fri 15 Mar 2024 09:28:15 PM UTC:
  tests:  0|2
 total_score: 50/70
 73baded
+Fri 15 Mar 2024 09:34:06 PM UTC: 
+ exercises.c | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘inicializarLibro’:
+exercises.c:155:23: error: incompatible types when assigning to type ‘Autor’ from type ‘Autor *’
+  155 |   temp_libro->autor = (Autor *) malloc(sizeof(Autor));
+      |                       ^
+exercises.c:156:24: error: invalid operands to binary == (have ‘Autor’ and ‘void *’)
+  156 |   if(temp_libro->autor == NULL) exit(EXIT_FAILURE);
+      |      ~~~~~~~~~~~~~~~~~ ^~
+      |                |
+      |                Autor
+exercises.c:159:27: error: invalid type argument of ‘->’ (have ‘Autor’)
+  159 |   strcpy(temp_libro->autor->nombre, nombreAutor);
+      |                           ^~
+exercises.c:160:20: error: invalid type argument of ‘->’ (have ‘Autor’)
+  160 |   temp_libro->autor->anioNacimiento = anioNacimiento;
+      |                    ^~
+exercises.c:161:10: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+  161 |   return temp_libro;
+      |          ^~~~~~~~~~
+exercises.c:150:6: note: declared here
+  150 | void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
+      |      ^~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+c069fb8
