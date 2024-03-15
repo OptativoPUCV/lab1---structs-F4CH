@@ -171,6 +171,5 @@ typedef struct nodo {
 
 Nodo *crearListaEnlazada(int arr[], int size) {
 
-  Nodo *head = m
   
   return NULL; }
