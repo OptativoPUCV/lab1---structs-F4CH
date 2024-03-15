@@ -108,3 +108,24 @@ Thu 14 Mar 2024 08:25:25 PM UTC:
  tests:  0|3
 total_score: 40/70
 16601ac
+Fri 15 Mar 2024 12:50:24 PM UTC: 
+ exercises.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘crearListaEnlazada’:
+exercises.c:174:16: error: ‘m’ undeclared (first use in this function)
+  174 |   Nodo *head = m
+      |                ^
+exercises.c:174:16: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:176:3: error: expected ‘,’ or ‘;’ before ‘return’
+  176 |   return NULL; }
+      |   ^~~~~~
+exercises.c:174:9: error: unused variable ‘head’ [-Werror=unused-variable]
+  174 |   Nodo *head = m
+      |         ^~~~
+exercises.c:176:16: error: control reaches end of non-void function [-Werror=return-type]
+  176 |   return NULL; }
+      |                ^
+cc1: all warnings being treated as errors
+Compilation failed
+5fbc11a
