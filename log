@@ -204,3 +204,24 @@ exercises.c:150:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 c069fb8
+Fri 15 Mar 2024 09:34:46 PM UTC: 
+ exercises.c | 1 -
+ 1 file changed, 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘inicializarLibro’:
+exercises.c:155:23: error: incompatible types when assigning to type ‘Autor’ from type ‘Autor *’
+  155 |   temp_libro->autor = (Autor *) malloc(sizeof(Autor));
+      |                       ^
+exercises.c:156:24: error: invalid operands to binary == (have ‘Autor’ and ‘void *’)
+  156 |   if(temp_libro->autor == NULL) exit(EXIT_FAILURE);
+      |      ~~~~~~~~~~~~~~~~~ ^~
+      |                |
+      |                Autor
+exercises.c:159:27: error: invalid type argument of ‘->’ (have ‘Autor’)
+  159 |   strcpy(temp_libro->autor->nombre, nombreAutor);
+      |                           ^~
+exercises.c:160:20: error: invalid type argument of ‘->’ (have ‘Autor’)
+  160 |   temp_libro->autor->anioNacimiento = anioNacimiento;
+      |                    ^~
+Compilation failed
+1f3c1d1

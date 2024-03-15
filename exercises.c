@@ -158,7 +158,6 @@ void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
   temp_libro->anioPublicacion = anioPublicacion;
   strcpy(temp_libro->autor->nombre, nombreAutor);
   temp_libro->autor->anioNacimiento = anioNacimiento;
-  return temp_libro;
 }
 
 /*
