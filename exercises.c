@@ -178,7 +178,7 @@ Nodo *crearListaEnlazada(int arr[], int size)
   }
   Nodo *temp_1;
   Nodo *temp_2;
-  for(int i = 1 ; i < size ; i)
+  for(int i = 1 ; i < size ; i++)
     {
       if(i == 0)
         {
