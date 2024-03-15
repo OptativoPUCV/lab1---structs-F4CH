@@ -256,3 +256,18 @@ exercises.c:160:13: error: invalid type argument of ‘->’ (have ‘Libro’)
       |             ^~
 Compilation failed
 22684d3
+Fri 15 Mar 2024 09:35:39 PM UTC: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘inicializarLibro’:
+exercises.c:155:23: error: incompatible types when assigning to type ‘Autor’ from type ‘Autor *’
+  155 |   temp_libro->autor = (Autor *) malloc(sizeof(Autor));
+      |                       ^
+exercises.c:156:24: error: invalid operands to binary == (have ‘Autor’ and ‘void *’)
+  156 |   if(temp_libro->autor == NULL) exit(EXIT_FAILURE);
+      |      ~~~~~~~~~~~~~~~~~ ^~
+      |                |
+      |                Autor
+Compilation failed
+52def94
